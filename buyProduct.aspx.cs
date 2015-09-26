@@ -21,38 +21,15 @@ public partial class Index : System.Web.UI.Page
         da.Fill(dt);
         if (dt.Rows.Count > 0)
         {
-            repDynamicRows.DataSource = dt;
-            repDynamicRows.DataBind();
+            //repDynamicRows.DataSource = dt;
+           // repDynamicRows.DataBind();
            
         }
         //  GridView3.Columns[0].Visible = false;
         con.Close();
-
-      
-
-
     }
-    public void buyProduct(object sender, EventArgs e)
+    public void buyProduct()
     {
-        //Get the reference of the clicked button.
-        Button button = (sender as Button);
-        //Get the command argument
-       // string commandArgument = button.CommandArgument;
-        //Get the Repeater Item reference
-        RepeaterItem item = button.NamingContainer as RepeaterItem;
-        //Get the repeater item index
-        int index = item.ItemIndex;
-        Response.Redirect("buyProduct.aspx");
-    }
 
-
-
-
-
-
-
-    protected void repDynamicRows_ItemCommand(object source, RepeaterCommandEventArgs e)
-    {
-        Response.Redirect("buyProduct.aspx");
     }
 }

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Bar.aspx.cs" Inherits="Index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="buyProduct.aspx.cs" Inherits="Index" %>
 
 <!DOCTYPE html>
 
@@ -41,23 +41,13 @@
         <a href="javascript:activateTab('page1')"><div class="barButton">Napoje</div></a>
         <a href="javascript:activateTab('page2')"><div class="barButton">Dania gorące</div></a>
     
+
+
       
   
-    <div id="tabCtrl">
-      <div id="page1" style="display: block;">Czekamy na baze 1</div>
-      <div id="page2" style="display: none;"><br /><br />
-          <asp:Repeater ID="repDynamicRows" runat="server" OnItemCommand="repDynamicRows_ItemCommand" >
-        <ItemTemplate>
-            <asp:Button ID="Button1" runat="server" Text="Button" CssClass="barButton" />
-            <div class="barButton">
-                <asp:Label ID="Label1" runat="server" OnClick="buyProduct" Text='<%# Eval("Nazwa") %>'></asp:Label>
-            </div>
-          
-            
-</ItemTemplate>
-              </asp:Repeater>
+   
       </div>
-    </div>
+  
             
     </div>
 
