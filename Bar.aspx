@@ -7,6 +7,7 @@
     <title>SC</title>
     <link href="Styles/Main.css" rel="stylesheet" />
     <link href="Styles/MenuButtons.css" rel="stylesheet" />
+    <link href="Styles/Orders.css" rel="stylesheet" />
      <script type="text/javascript">
 
       function activateTab(pageId) {
@@ -46,16 +47,12 @@
     <div id="tabCtrl">
       <div id="page1" style="display: block;">Czekamy na baze 1</div>
       <div id="page2" style="display: none;"><br /><br />
+
           <asp:Repeater ID="repDynamicRows" runat="server" OnItemCommand="repDynamicRows_ItemCommand" >
         <ItemTemplate>
-            <asp:Button ID="Button1" runat="server" Text="Button" CssClass="barButton" />
-            <div class="barButton">
-                <asp:Label ID="Label1" runat="server" OnClick="buyProduct" Text='<%# Eval("Nazwa") %>'></asp:Label>
-            </div>
-          
-            
-</ItemTemplate>
-              </asp:Repeater>
+            <asp:Button ID="Button1" runat="server" Text='<%# Eval("Nazwa") %>'  CommandName='<%# Eval("Id") %>' CssClass="orderButtons" />
+             </ItemTemplate>
+           </asp:Repeater>
       </div>
     </div>
             

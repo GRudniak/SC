@@ -7,6 +7,7 @@
     <title>SC</title>
     <link href="Styles/Main.css" rel="stylesheet" />
     <link href="Styles/MenuButtons.css" rel="stylesheet" />
+    <link href="Styles/Orders.css" rel="stylesheet" />
      <script type="text/javascript">
 
       function activateTab(pageId) {
@@ -37,11 +38,10 @@
         %>
         </div>
         <div class="rightColumn">
-
-        <a href="javascript:activateTab('page1')"><div class="barButton">Napoje</div></a>
-        <a href="javascript:activateTab('page2')"><div class="barButton">Dania gorące</div></a>
-    
-
+            <asp:Label ID="Label1" runat="server" Text=""></asp:Label><br />
+            <asp:Label ID="Label2" runat="server" Text="Cena: "></asp:Label><asp:Label ID="Label3" runat="server" Text=""></asp:Label><br /><br />
+            <asp:Button ID="Button1" runat="server" Text="Kup" CssClass="orderButtons" />
+  
 
       
   
